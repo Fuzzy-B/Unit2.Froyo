@@ -9,11 +9,12 @@ const order = {}
 
 function updateOrder(array) {
     for (const item of array) {
-        
-        if (order[item] === undefined) {
-            order[item] = 1;
+        let CurrentFlavor = item.toLowerCase().trim()
+        //made new var = order item, trimmed and lowercase
+        if (order[CurrentFlavor] === undefined) {
+            order[CurrentFlavor] = 1
         } else {
-            order[item] += 1
+            order[CurrentFlavor] += 1
         }
     }
     return order
